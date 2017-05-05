@@ -1,23 +1,15 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-sm-4">
-  <section class="navbar">
-    <div class="header">
-      <div class="title">Bloc Chat</div>
+<h1>Bloc Chat</h1>
 
-      <div class="tagline">Share as much as possible</div>
-    </div>
+<button class="new-room-button" type="button" ng-click="home.addRoom()">New Room</button>
 
-    <div class="list-title">chat rooms</div>
+<ul>
+	<li ng-repeat="room in home.rooms">{{ room.name }}</li>
+</ul>
 
-    <div class="chat-room-button">
-      <button class="btn btn-warning" ng-click="home.open()">new room</button>
-    </div>
-
-    <div class="chat-room-list">
-      <div class="chat-room-item" ng-repeat="room in home.getRooms" ng-click="home.setActiveRoom(room)">{{ room.$value }}</div>
-    </div>
-  </section>
+<div class="chat-room-list">
+   <div class="chat-room-item" ng-repeat="room in home.getRooms" ng-click="home.setActiveRoom(room)">{{ room.$value }}</div>
+ </div>
+</section>
 </div>
 
 <div class="col-sm-8">

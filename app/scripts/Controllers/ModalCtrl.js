@@ -1,18 +1,16 @@
+(function() {
+    function ModalCtrl(Room, $uibModalInstance) {
+        this.cancel = function () {
+            $uibModalInstance.dismiss();
+        };
 
-(function(){
-  function ModalCtrl($scope, $uibModalInstance){
-    $scope.newChatRoom = {$value: ''};
+        this.submit = function () {
+            Room.add(this.newRoom);
+            $uibModalInstance.close();
+        };
+    }
 
-    $scope.ok = function() { 
-      $uibModalInstance.close($scope.newChatRoom);
-    };
-
-    $scope.cancel = function() {
-      $uibModalInstance.dismiss('cancel');
-    };
-  }
-
-  angular
-    .module('blocChat')
-    .controller('ModalCtrl', ['$scope', '$uibModalInstance', ModalCtrl]);
+    angular
+        .module('blocChat')
+        .controller('ModalCtrl', ['Room', '$uibModalInstance', ModalCtrl]);
 })();
