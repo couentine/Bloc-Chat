@@ -3,7 +3,8 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>Bloc Chat</title>
-    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/main.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
 
@@ -16,20 +17,19 @@
 	<script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
 
 	<!-- Firebase -->
-
-  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCc3Y-LZ1GCSMk6Jrw_3EA_XrjwSIQbWYM",
-    authDomain: "bloc-chat-443a3.firebaseapp.com",
-    databaseURL: "https://bloc-chat-443a3.firebaseio.com",
-    projectId: "bloc-chat-443a3",
-    storageBucket: "bloc-chat-443a3.appspot.com",
-    messagingSenderId: "662906425979"
-  };
-  firebase.initializeApp(config);
-</script>
+	<script src="https://www.gstatic.com/firebasejs/3.7.5/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+		apiKey: "AIzaSyBLiW_QxfRV9v-QyoWBP1tyvW9NIpW0Xd4",
+		authDomain: "bloc-chat-fc7d2.firebaseapp.com",
+		databaseURL: "https://bloc-chat-fc7d2.firebaseio.com",
+		projectId: "bloc-chat-fc7d2",
+		storageBucket: "bloc-chat-fc7d2.appspot.com",
+		messagingSenderId: "63145842430"
+	  };
+	  firebase.initializeApp(config);
+	</script>
 
 	<!-- UI-Router -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
@@ -42,6 +42,7 @@
 	<script src="/scripts/controllers/HomeCtrl.js"></script>
 	<script src="/scripts/controllers/ModalCtrl.js"></script>
 	<script src="/scripts/services/Room.js"></script>
+	<script src="/scripts/services/Message.js"></script>
 
 </body>
 </html>
