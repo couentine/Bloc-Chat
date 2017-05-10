@@ -1,4 +1,3 @@
-
 (function() {
     function HomeCtrl(Room, Message, $uibModal, $scope, $cookies) {
         this.rooms = Room.all;
@@ -17,6 +16,12 @@
                 controller: 'ModalCtrl as modal'
             });
         }
+
+		this.sendMessage = function() {
+			this.newMessage.roomId = this.currentRoom.$id;
+			this.newMessage.username = this.currentUser;
+			Message.send(this.newMessage);
+		}
     }
 
     angular
